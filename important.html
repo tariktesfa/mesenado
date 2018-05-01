@@ -1,0 +1,41 @@
+$('select').on('change', function(){
+    $('select option').prop("disabled", false);
+    $("select").not(this).find("option[value="+ $(this).val() +     "]").prop('disabled', true);
+});
+
+<select name="vote1" id="vote1">
+<option value="player1">Player1</option>
+<option value="player2">Player2</option>
+<option value="player3">Player3</option>
+<option value="player4">Player3</option>
+</select>
+<select name="vote2" id="vote2">
+<option value="player1">Player1</option>
+<option value="player2">Player2</option>
+<option value="player3">Player3</option>
+<option value="player4">Player3</option>
+</select>
+<select name="vote3" id="vote3">
+<option value="player1">Player1</option>
+<option value="player2">Player2</option>
+<option value="player3">Player3</option>
+<option value="player4">Player3</option>
+</select>
+
+
+var $selects = $('select');
+
+$selects.on('change', function() {
+
+    // enable all options
+    $selects.find('option').prop('disabled', false);
+
+    // loop over each select, use its value to 
+    // disable the options in the other selects
+    $selects.each(function() {
+       $selects.not(this)
+               .find('option[value="' + this.value + '"]')
+               .prop('disabled', true); 
+    });
+
+});

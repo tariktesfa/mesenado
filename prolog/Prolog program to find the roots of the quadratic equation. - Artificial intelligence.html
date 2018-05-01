@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr" lang="en"><head>
+<link href="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/3957297643-widget_css_bundle.css" rel="stylesheet" type="text/css">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="oIcXg9TB-gs2RCEKjEjR7wYCI9uWoF42B_pxaTpNN_Q" name="google-site-verification">
+<title>
+Prolog program to find the roots of the quadratic equation. - Artificial intelligence
+</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="blogger" name="generator">
+<link href="http://thecodebuilder.blogspot.com/favicon.ico" rel="icon" type="image/x-icon">
+<link href="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/prolog-program-to-find-roots-of-quadratic-equation_003.html" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="CodeBuilder - Atom" href="http://thecodebuilder.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="CodeBuilder - RSS" href="http://thecodebuilder.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="CodeBuilder - Atom" href="https://www.blogger.com/feeds/8778103409164318535/posts/default">
+
+<link rel="alternate" type="application/atom+xml" title="CodeBuilder - Atom" href="http://thecodebuilder.blogspot.com/feeds/4162110822545415034/comments/default">
+<!--Can't find substitution for tag [blog.ieCssRetrofitLinks]-->
+<meta content="Prolog program to find the roots of the quadratic equation, Write a Prolog program to find the roots of the quadratic equation. SWI Prolog program to find the roots of the quadratic equation. AI Prolog program to find the roots of the quadratic equation." name="description">
+<meta content="http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html" property="og:url">
+<meta content="Prolog program to find the roots of the quadratic equation. - Artificial intelligence" property="og:title">
+<meta content="Prolog program to find the roots of the quadratic equation, Write a Prolog program to find the roots of the quadratic equation. SWI Prolog program to find the roots of the quadratic equation. AI Prolog program to find the roots of the quadratic equation." property="og:description">
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<link href="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/css.css" rel="stylesheet" type="text/css">
+<link href="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/font-awesome.css" rel="stylesheet" type="text/css">
+<style id="page-skin-1" type="text/css"><!--
+#navbar-iframe{display:none}*{padding:0;margin:0}body#layout #feature{display:none}a,abbr,acronym,address,applet,b,big,blockquote,body,caption,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,strong,sub,sup,tt,u,ul,var{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:0 0}.body-fauxcolumn-outer,body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}td,th{padding:5px}.body-fauxcolumn-outer,body{background:#e9eaed;font:400 12px 'Open Sans',Trebuchet MS,Sans-serif;color:#666}body p{padding-bottom:20px;line-height:2em}#container{margin:0 auto;color:#444;font-family:Roboto,sans-serif;font-size:14px;font-weight:400}#content{width:712px;padding:20px 0 10px;float:left;display:inline;margin-top:-10px}#content-wide{clear:both;width:1060px;padding:10px 0}#aside{display:inline;float:right;width:336px;color:#ccc;padding:10px 0}#footer{clear:both;overflow:hidden;background:#dfdfdf;font-size:12px}.radius{-webkit-border-radius:5px;-o-border-radius:5px;-moz-border-radius:5px;border-radius:5px}#main-top-nav{margin:0 0 -1px 0;padding:0;float:left;position:relative;width:100%;z-index:999;background-color:#fa3d03}#header-wrapper{min-height:90px}.head-col{padding:20px 0}#header{margin-top:-15px}#header h1{color:#666;text-shadow:2px 2px 2px #FFF;letter-spacing:-2px}#header a,#header a:hover{text-decoration:none;color:#666}#header .description{margin:-3px 5px 5px;line-height:1.4em;color:#888;font-size:14px;font-family:Roboto,sans-serif}.header{margin:35px 0}.descriptionwrapper p{padding:0;margin-bottom:0}.date-header{display:none}.post{padding:10px 20px;color:#666;font-family:Roboto,sans-serif;line-height:2em;margin-bottom:10px}.post-outer{line-height:2em;margin-bottom:10px;background:#fff;border-radius:5px;-webkit-box-shadow:1px 1px 2px 0 #d0d0d0;-moz-box-shadow:1px 1px 2px 0 #d0d0d0;box-shadow:1px 1px 2px 0 #d0d0d0;border:1px solid #ddd}.post .post-text{padding-bottom:5px;clear:both}.post h2.post-title{font-weight:700;font-family:Roboto,sans-serif;letter-spacing:-1px;margin-top:0}.post h2 a{color:#353737;letter-spacing:-1px}.post h2 a:hover{color:#666;text-decoration:none}.post ul.post-meta{color:#6b6969;clear:both;border-top:1px solid #222020;border-bottom:1px solid #222020;overflow:hidden;font-size:12px;font-style:italic;padding:5px 0;list-style:none}.post ul.post-meta li{padding-right:20px;float:left}.post ul.post-meta a{color:#0b6e69}.post .post-comment{display:inline;background:url(http://1.bp.blogspot.com/_MkGBVwDEF84/TGedevmtX_I/AAAAAAAAEZY/I5fmryAKyP8/s1600/post_comment.jpg) no-repeat center;width:33px;text-align:center;padding:5px 0 10px;margin-top:10px;float:right}.post h2,.post h3{padding:10px 0;font-weight:400;color:#666}.post h4,.post h5,.post h6{padding:10px 0;font-size:14px;font-weight:400;color:#666}.post blockquote{display:block;margin:20px;padding:0 30px;background:#ddd;font-style:italic;color:#999}.left{padding:20px 25px 0 0;width:300px;float:right}.sidebar h2{padding:10px;color:#333;font-family:'Fauna One',serif;font-size:14px;font-weight:400;line-height:1.2em;margin-bottom:6px;text-transform:uppercase;margin-top:0;border-bottom:1px solid #ddd}.sidebar .widget{font-size:12px;color:gray;margin:0 0 10px;padding-bottom:10px;overflow:hidden;font-family:Roboto,sans-serif;margin-bottom:20px;background:#fff;-webkit-box-shadow:1px 1px 2px 0 #d0d0d0;-moz-box-shadow:1px 1px 2px 0 #d0d0d0;box-shadow:1px 1px 2px 0 #d0d0d0;border-radius:5px}.sidebar .widget-content{padding:7px;margin:0;font-size:12px;color:gray}.sidebar ul{list-style-type:none;margin:0;padding:0;font-family:Roboto,sans-serif}.sidebar ul a{color:#333}.sidebar ul a:hover{color:#666}.sidebar li{list-style-type:none;margin:0;padding:0}.sidebar ul li{height:100%;line-height:22px;clear:left;list-style-type:none;overflow:hidden;color:gray;text-decoration:none;padding:0 0 0 10px;display:block;border-bottom:1px solid #f9f9f9}.sidebar a:hover{color:#D14F00}#comments{line-height:2em;margin-bottom:10px;background:#fff;border-radius:5px;-webkit-box-shadow:1px 1px 2px 0 #d0d0d0;-moz-box-shadow:1px 1px 2px 0 #d0d0d0;box-shadow:1px 1px 2px 0 #d0d0d0;border:1px solid #ddd}#comments h4{font-size:16px;font-family:Roboto,sans-serif;color:#333;font-weight:700;padding:10px;padding-left:20px;margin-top:10px}#comments-block{line-height:1.6em;margin:1em 0 1.5em;color:#7F7D77}#comments-block .comment-author{background:#dfdfdf none repeat scroll 0 0;border:1px solid #eaeaea;margin:.5em 0;padding-bottom:4px;padding-left:8px;padding-top:4px;font-weight:700}#comments-block .comment-body{background:#fff;border-left:1px solid #e3e3e3;border-right:1px solid #e3e3e3;margin-top:-8px;padding-left:10px;padding-top:10px}#comments-block .comment-footer{background:#fff;border-bottom:1px solid #e3e3e3;border-left:1px solid #e3e3e3;border-right:1px solid #e3e3e3;font-size:11px;line-height:1.4em;margin:-.25em 0 2em;padding-bottom:5px;padding-left:10px;text-transform:none}#comments-block .comment-body p{margin:0;padding-bottom:15px}#comment-holder{padding:10px 15px}.comments .comment-block,.comments .comment-thread.inline-thread .comment{background:#fff}#comments h4,.comments .comment-header,.comments .comment-thread.inline-thread .comment{position:relative}.comments .comments-content .icon.blog-author{position:absolute;margin:0;background-image:url(http://lh6.ggpht.com/-GDMurKK2tec/T5JCD6hoKoI/AAAAAAAABAc/COHOItBlFWk/author.png);width:36px;height:36px}.comments .comment-replybox-thread{margin-top:5px}.comment-form{max-width:100%}.comments .comments-content .comment-content,.comments .comments-content .comment-header{margin:0 0 8px;border:1px solid #ddd;padding:10px;border-left:4px solid #222;border-top:2px solid #dfdfdf;border-radius:4px}.comments .comments-content .comment-thread ol{margin:0 0 10px!important}.comments .comments-content .icon.blog-author{top:-2px;right:-2px}.comments .comments-content .comment-thread{margin:0!important}.comments .comments-content .inline-thread{padding:0!important;padding-left:12px!important}.blog-feeds{display:none}.comment-actions a{display:inline-block;vertical-align:middle;line-height:1.4;color:#fff!important;float:right;border:1px solid #ddd;background:#333;border-radius:5px;padding:7px 20px!important}img.centered{display:block;margin:auto}img.alignright{display:inline;margin:0 0 10px 20px}img.alignleft{display:inline;margin:0 20px 10px 0}.alignleft{float:left}.alignright{float:right}.post-footer-line-1{display:none}#comments-block .avatar-image-container img{background:#fff url(http://3.bp.blogspot.com/-UMSMHaOBzQg/To2XKFseUSI/AAAAAAAACVU/vlvJki_9vqA/s1600/gravatar.png) no-repeat left top;width:32px;height:32px}p.footer-link{clear:both;text-align:center;font-size:11px;padding:20px;overflow:hidden;color:#111;background:#fff;line-height:18px;border-top:1px solid #ddd}.post-header-home{margin:10px 20px}.post-header{margin-bottom:20px;margin-top:10px;border-bottom:1px solid #ddd}#related-posts li{border-bottom:1px solid #eee;margin-bottom:10px;padding-bottom:10px;display:block;float:left;margin-left:15px;width:47%}#related-posts{font-size:14px;line-height:20px}#related-posts h3{font-size:18px;line-height:14px;text-transform:capitalize;z-index:2;background:#fff;color:#333;position:relative;margin:3px 0}#related-posts img{-webkit-transition:all .1s ease-in-out;-moz-transition:all .1s ease-in-out;-ms-transition:all .1s ease-in-out;-o-transition:all .1s ease-in-out;transition:all .1s ease-in-out;opacity:1}#related-posts a{border:1px solid #ddd;margin:2px;text-align:center;-webkit-box-shadow:1px 1px 2px 0 #d0d0d0;-moz-box-shadow:1px 1px 2px 0 #d0d0d0;box-shadow:1px 1px 2px 0 #d0d0d0}.imgpost{width:193px;height:65px;border:0 none;margin:3px 0 0;padding:0;font-style:normal;font-variant:normal;font-weight:400;font-size:14px;line-height:25px;font-size-adjust:none;font-stretch:normal}.status-msg-body{position:relative!important}.CSS_LIGHTBOX{z-index:9999!important}.boxframe{position:relative;background:#fff;box-sizing:border-box}.boxframe:after,.boxframe:before{content:&quot;:&quot;position:absolute;height:1px;background:#fff;border:1px solid #bbb;border-top:0;box-shadow:0 0 3px rgba(0,0,0,.1)}.boxframe:before{bottom:-3px;left:3px;right:3px}.boxframe:after{left:6px;right:6px;bottom:-5px;box-shadow:0 0 3px rgba(0,0,0,.2)}#footer a{color:#222}.rmlink{float:right!important}.rmlink a{padding:8px 15px;text-transform:uppercase;-webkit-transition-property:all;-ms-transition-property:all;transition-property:all;-webkit-transition-duration:.4s;-ms-transition-duration:.4s;transition-duration:.4s;-webkit-text-shadow:0 1px 0 rgba(51,51,51,.9);-ms-text-shadow:0 1px 0 rgba(51,51,51,.9);text-shadow:0 1px 0 rgba(51,51,51,.9);-webkit-box-shadow:0 2px 1px rgba(0,0,0,.2),inset 0 -1px 0 rgba(0,0,0,.2),inset 0 1px 0 0 rgba(255,255,255,.2);-ms-box-shadow:0 2px 1px rgba(0,0,0,.2),inset 0 -1px 0 rgba(0,0,0,.2),inset 0 1px 0 0 rgba(255,255,255,.2);box-shadow:0 2px 1px rgba(0,0,0,.2),inset 0 -1px 0 rgba(0,0,0,.2),inset 0 1px 0 0 rgba(255,255,255,.2);background:#333;color:#fff;border-radius:5px}.rmlink a:hover{background:#444;color:#ddd!important}.jump-link{display:none}.label-size{margin:6px 0}#postsocial{border:1px solid #ddd;min-width:55px;width:auto;-moz-background-clip:padding;-webkit-background-clip:padding-box;-webkit-box-shadow:1px 0 5px rgba(0,0,0,.1);-moz-box-shadow:1px 0 5px rgba(0,0,0,.1);box-shadow:1px 0 5px rgba(0,0,0,.1);padding:5px;font:10px/16px Arial;background:padding-box #fff;position:absolute;margin-left:-94px;top:150px}#postsocial.fixed{position:fixed;top:150px}.postsocialbtn{width:auto;height:auto;line-height:0;padding:4px 1px;text-align:center}.post-feeds{display:none}.jqmaintitle{margin:0;font-size:30px;padding:10px 10px!important;border-bottom:1px solid #ddd;border-top:1px solid #fff;border-radius:3px}.jqmaintitle a{color:#222!important;padding-bottom:6px}.jqmaintitle a:hover{color:#444!important}.main-top-nav{border-radius:0!important;z-index:10000}.post ul li{margin-left:20px;list-style:initial}.img-post-thumb{-webkit-box-shadow:0 4px 4px -4px rgba(0,0,0,.7);box-shadow:0 4px 4px -4px rgba(0,0,0,.7)}.btn-def{width:16px;height:17px;background:url(http://3.bp.blogspot.com/-F6JS0gzLxag/UwI54vaUTlI/AAAAAAAAATE/EEQ-eSyg-yc/s1600/search.png) no-repeat;display:inline-block;vertical-align:middle;zoom:1;text-shadow:none;color:transparent;border:none;background-color:transparent;z-index:671;margin-left:-30px}.form-main-search{padding-right:30px}.collapse{display:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a{background:0 0}a:active,a:hover{outline:0}h1{margin:.67em 0}b,strong{font-weight:700}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{margin:0}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}@media print{*{text-shadow:none!important;color:#000!important;background:transparent!important;box-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}a[href^="javascript:"]:after,a[href^="#"]:after{content:""}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}img{max-width:100%!important}@page{margin:2cm .5cm}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}select{background:#fff!important}.navbar{display:none}.table td,.table th{background-color:#fff!important}.btn>.caret,.dropup>.btn>.caret{border-top-color:#000!important}.label{border:1px solid #000}.table{border-collapse:collapse!important}.table-bordered td,.table-bordered th{border:1px solid #ddd!important}}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:62.5%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:Roboto,sans-serif;font-size:14px;line-height:1.428571429;color:#333;background-color:#f0f0f0}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#4d8b97;text-decoration:none}a:focus,a:hover{color:#0074a2;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.428571429;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{font-family:Roboto,sans-serif;font-weight:500;line-height:1.1;color:inherit}.h1 .small,.h1 small,.h2 .small,.h2 small,.h3 .small,.h3 small,.h4 .small,.h4 small,.h5 .small,.h5 small,.h6 .small,.h6 small,h1 .small,h1 small,h2 .small,h2 small,h3 .small,h3 small,h4 .small,h4 small,h5 .small,h5 small,h6 .small,h6 small{font-weight:400;line-height:1;color:#999}h1,h2,h3{margin-top:20px;margin-bottom:10px}h1 .small,h1 small,h2 .small,h2 small,h3 .small,h3 small{font-size:65%}h4,h5,h6{margin-top:10px;margin-bottom:10px}h4 .small,h4 small,h5 .small,h5 small,h6 .small,h6 small{font-size:75%}.h1,h1{font-size:36px}.h2,h2{font-size:30px}.h3,h3{font-size:24px}.h4,h4{font-size:18px}.h5,h5{font-size:14px}.h6,h6{font-size:12px}p{margin:0 0 10px}.lead{margin-bottom:20px;font-size:16px;font-weight:200;line-height:1.4}@media (min-width:768px){.lead{font-size:21px}}.small,small{font-size:85%}cite{font-style:normal}.text-muted{color:#999}.text-primary{color:#428bca}.text-primary:hover{color:#3071a9}.text-warning{color:#8a6d3b}.text-warning:hover{color:#66512c}.text-danger{color:#a94442}.text-danger:hover{color:#843534}.text-success{color:#3c763d}.text-success:hover{color:#2b542c}.text-info{color:#31708f}.text-info:hover{color:#245269}.text-left{text-align:left}.text-right{text-align:right}.text-center{text-align:center}.page-header{padding-bottom:9px;margin:40px 0 20px;border-bottom:1px solid #eee}ol,ul{margin-top:0;margin-bottom:10px}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}.list-inline,.list-unstyled{padding-left:0;list-style:none}.list-inline>li{display:inline-block;padding-left:5px;padding-right:5px}.list-inline>li:first-child{padding-left:0}dl{margin-top:0;margin-bottom:20px}dd,dt{line-height:1.428571429}dt{font-weight:700}dd{margin-left:0}@media (min-width:768px){.dl-horizontal dt{float:left;width:160px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dl-horizontal dd{margin-left:180px}.dl-horizontal dd:after,.dl-horizontal dd:before{content:" ";display:table}.dl-horizontal dd:after{clear:both}}abbr[data-original-title],abbr[title]{cursor:help}.initialism{font-size:90%;text-transform:uppercase}blockquote{padding:10px 20px;margin:0 0 20px;border-left:5px solid #eee}blockquote p{font-size:17.5px;font-weight:300;line-height:1.25}blockquote p:last-child{margin-bottom:0}blockquote .small,blockquote small{display:block;line-height:1.428571429;color:#999}blockquote .small:before,blockquote small:before{content:'\2014 \00A0'}blockquote.pull-right{padding-right:15px;padding-left:0;border-right:5px solid #eee;border-left:0}blockquote.pull-right .small,blockquote.pull-right p,blockquote.pull-right small{text-align:right}blockquote.pull-right .small:before,blockquote.pull-right small:before{content:''}blockquote.pull-right .small:after,blockquote.pull-right small:after{content:'\00A0 \2014'}blockquote:after,blockquote:before{content:""}address{margin-bottom:20px;font-style:normal;line-height:1.428571429}code,kbd,pre,samp{font-family:Menlo,Monaco,Consolas,"Courier New",monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;white-space:nowrap;border-radius:4px}pre{display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.428571429;word-break:break-all;word-wrap:break-word;color:#333;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;background-color:transparent;border-radius:0}.pre-scrollable{max-height:340px;overflow-y:scroll}.thumbnail{display:block;padding:0;margin-bottom:20px;line-height:1.428571429;background-color:#fff;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out;border-radius:3px;box-shadow:0 1px 1px 0 rgba(0,0,0,.18)}.thumbnail a>img,.thumbnail>img{display:block;max-width:100%;height:auto;margin-left:auto;margin-right:auto}a.thumbnail.active,a.thumbnail:focus,a.thumbnail:hover{border-color:#428bca}.thumbnail .caption{padding:9px;color:#333}.well{min-height:20px;padding:10px}.well blockquote{border-color:#ddd;border-color:rgba(0,0,0,.15)}.well-lg{padding:24px;border-radius:6px}.well-sm{padding:9px;border-radius:3px}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none!important;visibility:hidden!important}.affix{position:fixed}.h-title{font-size:30px;margin:5px 0;line-height:1.1;font-family:Pacifico,cursive}.h-title a{color:#666}.img-post-thumb:hover{opacity:.8}.homapge-thumb{margin:10px 0}.caret{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px solid;border-right:4px solid transparent;border-left:4px solid transparent}.dropdown{position:relative}.dropdown-toggle:focus{outline:0}.dropdown-menu{position:absolute;top:100%;left:0;z-index:1000;display:none;float:left;min-width:160px;margin:2px 0 0;list-style:none;font-size:14px;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0,0,0,.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,.175);box-shadow:0 6px 12px rgba(0,0,0,.175);background-clip:padding-box}.dropdown-menu.pull-right{right:0;left:auto}.dropdown-menu .divider{height:2px;margin:9px 0;overflow:hidden;background-color:#e5e5e5}.dropdown-menu>li>a{display:block;padding:8px 10px;clear:both;font-weight:400;line-height:1.428571429;color:#333;white-space:nowrap;border-bottom:1px solid #e4e4e4}.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover{text-decoration:none;color:#262626;background-color:#f5f5f5}.dropdown-menu>.active>a,.dropdown-menu>.active>a:focus,.dropdown-menu>.active>a:hover{color:#fff;text-decoration:none;outline:0;background-color:#428bca}.dropdown-menu>.disabled>a,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover{color:#999}.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover{text-decoration:none;background-color:transparent;background-image:none;filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);cursor:not-allowed}.open>.dropdown-menu{display:block}.open>a{outline:0}.dropdown-header{display:block;padding:3px 20px;font-size:12px;line-height:1.428571429;color:#999}.dropdown-backdrop{position:fixed;left:0;right:0;bottom:0;top:0;z-index:990}.pull-right>.dropdown-menu{right:0;left:auto}.dropup .caret,.navbar-fixed-bottom .dropdown .caret{border-top:0;border-bottom:4px solid;content:""}.dropup .dropdown-menu,.navbar-fixed-bottom .dropdown .dropdown-menu{top:auto;bottom:100%;margin-bottom:1px}@media (min-width:768px){.navbar-right .dropdown-menu{right:0;left:auto}}.nav{margin-bottom:0;padding-left:0;list-style:none}.nav:after,.nav:before{content:" ";display:table}.nav:after{clear:both}.nav>li{position:relative;display:block}.nav>li>a{position:relative;display:block;padding:10px 15px}.nav>li>a:focus,.nav>li>a:hover{text-decoration:none;background-color:#000}.nav>li.disabled>a{color:#999}.nav>li.disabled>a:focus,.nav>li.disabled>a:hover{color:#999;text-decoration:none;background-color:transparent;cursor:not-allowed}.nav .open>a,.nav .open>a:focus,.nav .open>a:hover{background-color:#eee;border-color:#428bca}.nav .nav-divider{height:1px;margin:9px 0;overflow:hidden;background-color:#e5e5e5}.nav>li>a>img{max-width:none}.nav-tabs{border-bottom:1px solid #ddd}.nav-tabs>li{float:left;margin-bottom:-1px}.nav-tabs>li>a{margin-right:2px;line-height:1.428571429;border:1px solid transparent;border-radius:4px 4px 0 0}.nav-tabs>li>a:hover{border-color:#eee #eee #ddd}.nav-tabs>li.active>a,.nav-tabs>li.active>a:focus,.nav-tabs>li.active>a:hover{color:#555;background-color:#fff;border:1px solid #ddd;border-bottom-color:transparent;cursor:default}.nav-tabs.nav-justified{width:100%;border-bottom:0}.nav-tabs.nav-justified>li{float:none}.nav-tabs.nav-justified>li>a{text-align:center;margin-bottom:5px}.nav-tabs.nav-justified>.dropdown .dropdown-menu{top:auto;left:auto}@media (min-width:768px){.nav-tabs.nav-justified>li{display:table-cell;width:1%}.nav-tabs.nav-justified>li>a{margin-bottom:0}}.nav-tabs.nav-justified>li>a{margin-right:0;border-radius:4px}.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:hover{border:1px solid #ddd}@media (min-width:768px){.nav-tabs.nav-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0}.nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>.active>a:focus,.nav-tabs.nav-justified>.active>a:hover{border-bottom-color:#fff}}.nav-pills,.nav-pills>li{float:left}.nav-pills>li>a{color:#fff}.nav-pills>li+li{margin-left:2px}.nav-pills>li.active>a,.nav-pills>li.active>a:focus,.nav-pills>li.active>a:hover{color:#fff;background:#222;border-radius:0}.nav-pills>li>a:focus,.nav-pills>li>a:hover{text-decoration:none;background-color:#222}.nav-stacked>li{float:none}.nav-stacked>li+li{margin-top:2px;margin-left:0}.nav-justified{width:100%}.nav-justified>li{float:none}.nav-justified>li>a{text-align:center;margin-bottom:5px}.nav-justified>.dropdown .dropdown-menu{top:auto;left:auto}@media (min-width:768px){.nav-justified>li{display:table-cell;width:1%}.nav-justified>li>a{margin-bottom:0}}.nav-tabs-justified{border-bottom:0}.nav-tabs-justified>li>a{margin-right:0;border-radius:4px}.nav-tabs-justified>.active>a,.nav-tabs-justified>.active>a:focus,.nav-tabs-justified>.active>a:hover{border:1px solid #ddd}@media (min-width:768px){.nav-tabs-justified>li>a{border-bottom:1px solid #ddd;border-radius:4px 4px 0 0}.nav-tabs-justified>.active>a,.nav-tabs-justified>.active>a:focus,.nav-tabs-justified>.active>a:hover{border-bottom-color:#fff}}.tab-content>.tab-pane{display:none}.tab-content>.active{display:block}.nav-tabs .dropdown-menu{margin-top:-1px;border-top-right-radius:0;border-top-left-radius:0}.navbar{position:relative;min-height:40px;border:1px solid transparent}.navbar:after,.navbar:before{content:" ";display:table}.navbar:after{clear:both}@media (min-width:768px){.navbar{border-radius:4px}}.navbar-header:after,.navbar-header:before{content:" ";display:table}.navbar-header:after{clear:both}@media (min-width:768px){.navbar-header{float:left}}.navbar-collapse{max-height:340px;overflow-x:visible;padding-right:15px;padding-left:15px;border-top:1px solid transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,.1);-webkit-overflow-scrolling:touch}.navbar-collapse:after,.navbar-collapse:before{content:" ";display:table}.navbar-collapse:after{clear:both}.navbar-collapse.in{overflow-y:auto}@media (min-width:768px){.navbar-collapse{width:auto;border-top:0;box-shadow:none}.navbar-collapse.collapse{display:block!important;height:auto!important;padding-bottom:0;overflow:visible!important}.navbar-collapse.in{overflow-y:visible}.navbar-fixed-bottom .navbar-collapse,.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse{padding-left:0;padding-right:0}}.container>.navbar-collapse,.container>.navbar-header{margin-right:-15px;margin-left:-15px}@media (min-width:768px){.container>.navbar-collapse,.container>.navbar-header{margin-right:0;margin-left:0}}.navbar-static-top{z-index:1000;border-width:0 0 1px}@media (min-width:768px){.navbar-static-top{border-radius:0}}.navbar-fixed-bottom,.navbar-fixed-top{position:fixed;right:0;left:0;z-index:1030}@media (min-width:768px){.navbar-fixed-bottom,.navbar-fixed-top{border-radius:0}}.navbar-fixed-top{top:0;border-width:0 0 1px}.navbar-fixed-bottom{bottom:0;margin-bottom:0;border-width:1px 0 0}.navbar-brand{float:left;padding:6px;font-size:15px;line-height:30px;font-family:Roboto,sans-serif;text-transform:capitalize}.navbar-brand:focus,.navbar-brand:hover{text-decoration:none}@media (min-width:768px){.navbar>.container .navbar-brand{margin-left:-15px}}.navbar-toggle{position:relative;float:right;margin-right:15px;padding:9px 10px;margin-top:8px;margin-bottom:8px;background-color:transparent;background-image:none;border:1px solid transparent;border-radius:4px}.navbar-toggle .icon-bar{display:block;width:22px;height:2px;border-radius:1px}.navbar-toggle .icon-bar+.icon-bar{margin-top:4px}@media (min-width:768px){.navbar-toggle{display:none}}.navbar-nav{margin:7.5px -15px}.navbar-nav>li>a{padding-top:10px;padding-bottom:10px;line-height:20px}@media (max-width:767px){.navbar-nav .open .dropdown-menu{position:static;float:none;width:auto;margin-top:0;background-color:transparent;border:0;box-shadow:none}.navbar-nav .open .dropdown-menu .dropdown-header,.navbar-nav .open .dropdown-menu>li>a{padding:5px 15px 5px 25px}.navbar-nav .open .dropdown-menu>li>a{line-height:20px}.navbar-nav .open .dropdown-menu>li>a:focus,.navbar-nav .open .dropdown-menu>li>a:hover{background-image:none}}@media (min-width:768px){.navbar-nav{float:left;margin:0}.navbar-nav>li{float:left}.navbar-nav>li>a{padding-top:11px;padding-bottom:11px}.navbar-nav.navbar-right:last-child{margin-right:-15px}}@media (min-width:768px){.navbar-left{float:left!important}.navbar-right{float:right!important}}.navbar-form{margin-left:-15px;margin-right:-15px;padding:10px 15px;border-top:1px solid transparent;border-bottom:1px solid transparent;-webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1);margin-top:4px;margin-bottom:2px}@media (min-width:768px){.navbar-form .form-group{display:inline-block;margin-bottom:0;vertical-align:middle}.navbar-form .form-control{display:inline-block}.navbar-form select.form-control{width:auto}.navbar-form .checkbox,.navbar-form .radio{display:inline-block;margin-top:0;margin-bottom:0;padding-left:0}.navbar-form .checkbox input[type=checkbox],.navbar-form .radio input[type=radio]{float:none;margin-left:0}}@media (max-width:767px){.navbar-form .form-group{margin-bottom:5px}}@media (min-width:768px){.navbar-form{width:auto;border:0;margin-left:0;margin-right:0;padding-top:0;padding-bottom:0;-webkit-box-shadow:none;box-shadow:none}.navbar-form.navbar-right:last-child{margin-right:-15px}}.navbar-nav>li>.dropdown-menu{margin-top:0;border-top-right-radius:0;border-top-left-radius:0}.navbar-fixed-bottom .navbar-nav>li>.dropdown-menu{border-bottom-right-radius:0;border-bottom-left-radius:0}.navbar-nav.pull-right>li>.dropdown-menu,.navbar-nav>li>.dropdown-menu.pull-right{left:auto;right:0}.navbar-btn{margin-top:8px;margin-bottom:8px}.navbar-btn.btn-sm{margin-top:10px;margin-bottom:10px}.navbar-btn.btn-xs{margin-top:14px;margin-bottom:14px}.navbar-text{margin-top:15px;margin-bottom:15px}@media (min-width:768px){.navbar-text{float:left;margin-left:15px;margin-right:15px}.navbar-text.navbar-right:last-child{margin-right:0}}.navbar-default{background:#222;border:1px solid #222;border-bottom:none;background-image:-moz-linear-gradient(top,#222,#111);background-image:-webkit-gradient(linear,0 0,0 100%,from(#222),to(#111));background-image:-webkit-linear-gradient(top,#222,#111);background-image:-o-linear-gradient(top,#222,#111);background-image:linear-gradient(to bottom,#222,#111);background-repeat:repeat-x}.navbar-default .navbar-brand{color:#ddd;margin-left:0!important}.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover{color:#eee}.navbar-default .navbar-text{color:#777}.navbar-default .navbar-nav>li>a{color:#ddd;text-transform:capitalize;font-size:13px}.navbar-default .navbar-nav>.active>a,.navbar-default .navbar-nav>.active>a:focus,.navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{color:#fff}.navbar-default .navbar-nav>.disabled>a,.navbar-default .navbar-nav>.disabled>a:focus,.navbar-default .navbar-nav>.disabled>a:hover{color:#ccc;background-color:transparent}.navbar-default .navbar-toggle{border-color:#ddd}.navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover{background-color:#ddd}.navbar-default .navbar-toggle .icon-bar{background-color:#ccc}.navbar-default .navbar-collapse,.navbar-default .navbar-form{border-color:#e7e7e7}.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:focus,.navbar-default .navbar-nav>.open>a:hover{color:#fff;background:#000!important}@media (max-width:767px){.navbar-default .navbar-nav .open .dropdown-menu>li>a{color:#777}.navbar-default .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{color:#333;background-color:transparent}.navbar-default .navbar-nav .open .dropdown-menu>.active>a,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover{color:#555;background-color:#e7e7e7}.navbar-default .navbar-nav .open .dropdown-menu>.disabled>a,.navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:focus,.navbar-default .navbar-nav .open .dropdown-menu>.disabled>a:hover{color:#ccc;background-color:transparent}}.navbar-default .navbar-link{color:#777}.navbar-default .navbar-link:hover{color:#333}.navbar-inverse{background-color:#222;border-color:#080808}.navbar-inverse .navbar-brand{color:#999}.navbar-inverse .navbar-brand:focus,.navbar-inverse .navbar-brand:hover{color:#fff;background-color:transparent}.navbar-inverse .navbar-nav>li>a,.navbar-inverse .navbar-text{color:#999}.navbar-inverse .navbar-nav>li>a:focus,.navbar-inverse .navbar-nav>li>a:hover{color:#fff;background-color:transparent}.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover{color:#fff;background-color:#080808}.navbar-inverse .navbar-nav>.disabled>a,.navbar-inverse .navbar-nav>.disabled>a:focus,.navbar-inverse .navbar-nav>.disabled>a:hover{color:#444;background-color:transparent}.navbar-inverse .navbar-toggle{border-color:#333}.navbar-inverse .navbar-toggle:focus,.navbar-inverse .navbar-toggle:hover{background-color:#333}.navbar-inverse .navbar-toggle .icon-bar{background-color:#fff}.navbar-inverse .navbar-collapse,.navbar-inverse .navbar-form{border-color:#101010}.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover{background-color:#080808;color:#fff}@media (max-width:767px){.navbar-inverse .navbar-nav .open .dropdown-menu>.dropdown-header{border-color:#080808}.navbar-inverse .navbar-nav .open .dropdown-menu .divider{background-color:#080808}.navbar-inverse .navbar-nav .open .dropdown-menu>li>a{color:#999}.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover{color:#fff;background-color:transparent}.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a,.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>.active>a:hover{color:#fff;background-color:#080808}.navbar-inverse .navbar-nav .open .dropdown-menu>.disabled>a,.navbar-inverse .navbar-nav .open .dropdown-menu>.disabled>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>.disabled>a:hover{color:#444;background-color:transparent}}.navbar-inverse .navbar-link{color:#999}.navbar-inverse .navbar-link:hover{color:#fff}#list-main{margin:0 auto;float:left;padding-bottom:20px}.container,.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1040px}}.row{margin-left:-15px;margin-right:-15px}.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:0}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:0}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:0}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:0}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:0}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:0}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:0}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:0}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}#container{max-width:1040px}.img-home-thumb{width:200px;height:154px}.hash-home{float:left;margin-right:4px}.comment-link{float:right}.form-control{display:block;width:100%;padding:5px;font-size:14px;line-height:1.428571429;color:#555;vertical-align:middle;background-color:#fff;background-image:none;border-radius:4px;border:none;border:1px solid #EEE}.form-control:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}.rowpost{margin:0!important;padding:10px 0 6px;border-radius:3px}.post-sharing-menu{padding:5px;height:50px}.post-sharing-menu li{padding:5px 0;display:block;float:left;margin:0 10px 0 0!important;margin-right:5px}.btn-danger{border:1px solid #ddd;padding:8px 36px;background:#333;color:#fff;border-radius:5px;-webkit-box-shadow:1px 1px 2px 0 #d0d0d0;-moz-box-shadow:1px 1px 2px 0 #d0d0d0;box-shadow:1px 1px 2px 0 #d0d0d0}.btn-danger:hover{color:#ddd}.btn-email{width:100%;margin-top:10px;background:#2980b9;color:#ddd;box-shadow:none;padding:8px}#blog-pager{margin:1em 0;text-align:center;overflow:hidden;padding:10px 0}#sidebar .list-label-widget-content ul li{padding:3px!important;margin:0!important;border:0!important;width:100%}#sidebar .list-label-widget-content ul li a{padding:8px 10px;font-size:13px;border-radius:0;width:100%;background-color:#fff;color:#666!important;border:0}#sidebar .list-label-widget-content ul li span{padding:8px 10px;font-size:13px;border-radius:0;width:100%;background-color:#222!important;color:#fff!important;float:left;border:0}#sidebar .list-label-widget-content ul li a:hover{color:#2ea2cc!important}.list-label-widget-content ul li{float:left;padding:3px!important;margin:0!important;border:0!important}.list-label-widget-content ul li a{float:left;background:#222;padding:8px 10px;border-radius:4px;color:#fff!important;text-transform:uppercase;font-size:13px;border:1px solid #ddd}.list-label-widget-content ul li span{float:left;background:#fff;padding:8px 10px;border-radius:4px;color:#222;text-transform:uppercase;font-size:13px;border:1px solid #222}.share_pfb:hover,.share_pgo:hover,.share_pli:hover,.share_ptwi:hover{color:#fff!important}.share_pfb,.share_pgo,.share_pli,.share_ptwi{color:#fff;float:left;padding:6px 24px;border-radius:3px;font-size:15px;line-height:20px}.share_pfb{background:#4c66a4}.share_ptwi{background:#00c3f3}.share_pli{background:#0274B3}.share_pgo{background:#DB4A37}.footer-top{background:#fff}.footer-top h2{color:#222;padding:10px;font-family:'Fauna One',serif;font-size:18px;font-weight:400;line-height:1.2em;margin-bottom:6px;text-transform:uppercase;border-bottom:1px solid #D3D3D3;margin-top:10px;border-left:5px solid #222}.blog-pager-element a{background:#222;margin-right:5px;font-weight:700;padding:8px 15px;text-transform:uppercase;color:#fff;border-radius:5px}.feed-links{display:none}.blogger-pager a{float:left;font-size:15px;color:#fff!important;padding-left:15px;padding-right:15px}.blog-pager-p{background:#777;float:left;font-size:15px;margin-right:5px;font-weight:700;padding:8px 15px;text-transform:uppercase;color:#fff;border-radius:5px}.blogger-pager a{text-decoration:none}.blogger-pager{float:left;width:100%}ul.nav li.dropdown:hover>ul.dropdown-menu{display:block}.post-div{background:#fff;margin:0 0 20px;position:relative;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;-webkit-box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.2),transparent 0 0 0,transparent 0 0 0,transparent 0 0 0,transparent 0 0 0;-moz-box-shadow:inset 0 1px 2px 0 rgba(0,0,0,.2),transparent 0 0 0,transparent 0 0 0,transparent 0 0 0,transparent 0 0 0;box-shadow:0 1px 2px 0 rgba(0,0,0,.2),transparent 0 0 0,transparent 0 0 0,transparent 0 0 0,transparent 0 0 0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.post-header-label{color:#888;font-size:12px;border-top:1px solid #eee;padding:20px}.s-clear{clear:both}.PopularPosts .widget-content ul li{border:1px solid #ddd;padding:10px;margin-bottom:10px;-webkit-box-shadow:1px 1px 2px 0 #d0d0d0;-moz-box-shadow:1px 1px 2px 0 #d0d0d0;box-shadow:1px 1px 2px 0 #d0d0d0;border-radius:4px}.PopularPosts img{border-radius:10px;padding:3px}.Navbar{display:none}
+
+--></style>
+<script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/osd.js"></script><script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/ca-pub-9069475178423107.js"></script><script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/cbgapi.loaded_3" async=""></script><script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/cbgapi.loaded_2" async=""></script><script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/cbgapi.loaded_1" async=""></script><script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/cbgapi.loaded_0" async=""></script><script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+      //<![CDATA[
+      var thumbnail_mode = "no-float" ;
+      summary_noimg = 385;
+      summary_img = 285;
+      img_thumb_height = 200;
+      img_thumb_width = 250;
+      eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('y 10(g,o){8(g.q("<")!=-1){6 s=g.1k("<");z(6 i=0;i<s.4;i++){8(s[i].q(">")!=-1){s[i]=s[i].L(s[i].q(">")+1,s[i].4)}}g=s.1l("")}o=(o<g.4-1)?o:g.4-2;16(g.1g(o-1)!=\' \'&&g.q(\' \',o)!=-1)o++;g=g.L(0,o-1);I g+\'...\'}y 1e(14,E){6 l=m.1F(14);6 H="";6 u=l.1z("u");6 J=1C;8(u.4>=1){H=\'<a K="\'+E+\'"><R P="17:13; 1E-1D: 1y;1x:12;1s:1r;18: E(\'+u[0].M+\') 1t 0 1u-1w 1v;18-1B: 12 1q;"></R></a>\';J=1A}6 T=H+\'<l>\'+10(l.Z,J)+\'</l>\';l.Z=T}6 7=x v();6 h=0;6 f=x v();6 9=x v();y 1n(N){z(6 i=0;i<N.U.n.4;i++){6 n=N.U.n[i];7[h]=n.1f.$t;1c{9[h]=n.1a$1b.E;9=9.1p("/1h-c/","/1o-a/")}1m(1i){s=n.1j.$t;a=s.q("<u");b=s.q("M=\\"",a);c=s.q("\\"",b+5);d=s.1d(b+5,c-b-5);8((a!=-1)&&(b!=-1)&&(c!=-1)&&(d!="")){9[h]=d}B{8(S(V)!==\'Q\')9[h]=V;B 9[h]="27://3.28.26.25/-23/24/2a/29/2b/2e.2d"}}8(7[h].4>W)7[h]=7[h].L(0,W)+"...";z(6 k=0;k<n.O.4;k++){8(n.O[k].1G==\'2c\'){f[h]=n.O[k].K;h++}}}}y 21(){6 w=x v(0);6 D=x v(0);6 C=x v(0);z(6 i=0;i<f.4;i++){8(!Y(w,f[i])){w.4+=1;w[w.4-1]=f[i];D.4+=1;C.4+=1;D[D.4-1]=7[i];C[C.4-1]=9[i]}}7=D;f=w;9=C}y Y(a,e){z(6 j=0;j<a.4;j++)8(a[j]==e)I 1N;I 22}y 1O(11){6 G;8(S(X)!==\'Q\')G=X;B G="#1P";z(6 i=0;i<f.4;i++){8((f[i]==11)||(!7[i])){f.A(i,1);7.A(i,1);9.A(i,1);i--}}6 r=19.1M((7.4-1)*19.1L());6 i=0;8(7.4==0){m.p(\'<F>1H 1I 1J</F>\')};8(7.4>0)m.p(\'<F>\'+1K+\'</F>\');m.p(\'<l P="1Q: 1R;"/>\');16(i<7.4&&i<20&&i<1X){m.p(\'<a P="1Y-1Z:1W;17:13;\');8(i!=0)m.p(\'"\');B m.p(\'"\');m.p(\' K="\'+f[r]+\'"><u 15="u-1V-1S" M="\'+9[r]+\'"/><1T/><l 15="1U">\'+7[r]+\'</l></a>\');i++;8(r<7.4-1){r++}B{r=0}}m.p(\'</l>\');f.A(0,f.4);9.A(0,9.4);7.A(0,7.4)}',62,139,'||||length||var|relatedTitles|if|thumburl||||||relatedUrls|strx|relatedTitlesNum||||div|document|entry|chop|write|indexOf||||img|Array|tmp|new|function|for|splice|else|tmp3|tmp2|url|h3|splitbarcolor|imgtag|return|summ|href|substring|src|json|link|style|undefined|span|typeof|summary|feed|defaultnoimage|35|splittercolor|contains_thumbs|innerHTML|removeHtmlTag|current|250px|left|pID|class|while|float|background|Math|media|thumbnail|try|substr|createSummaryAndThumb|title|charAt|s72|error|content|split|join|catch|related_results_labels_thumbs|s300|replace|auto|200px|height|center|no|transparent|repeat|width|10px|getElementsByTagName|summary_img|size|summary_noimg|right|margin|getElementById|rel|No|similar|posts|relatedpoststitle|random|floor|true|printRelatedLabels|DDDDDD|clear|both|thumb|br|imgpost|home|none|maxresults|text|decoration||removeRelatedDuplicates|false|PpjfsStySz0|UF91FE7rxfI|com|blogspot|http|bp|092MmUHSFQ0|AAAAAAAACl8|s1600|alternate|jpg|no_image'.split('|'),0,{}))
+      //]]>
+    </script>
+<link href="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/authorization.css" media="all" onload="if(media!='all')media='all'" rel="stylesheet"><noscript><link href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=8778103409164318535&amp;zx=17ce6b45-5a0f-44b9-80a3-335950547bb7' rel='stylesheet'/></noscript>
+<script type="text/javascript" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/google_top_exp.js"></script><script async="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/lazy.js"></script><style>.gc-bubbleDefault{background-color:transparent !important;text-align:left;padding:0 !important;margin:0 !important;border:0 !important;table-layout:auto !important}.gc-reset{background-color:transparent !important;border:0 !important;padding:0 !important;margin:0 !important;text-align:left}.pls-bubbleTop{border-bottom:1px solid #ccc !important}.pls-topTail,.pls-vertShimLeft,.pls-contentLeft{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/border_3.gif) !important}.pls-topTail{background-repeat:repeat-x !important;background-position:bottom !important}.pls-vertShim{background-color:#fff !important;text-align:right}.tbl-grey .pls-vertShim{background-color:#f5f5f5 !important}.pls-vertShimLeft{background-repeat:repeat-y !important;background-position:right !important;height:4px}.pls-vertShimRight{height:4px}.pls-confirm-container .pls-vertShim{background-color:#fff3c2 !important}.pls-contentWrap{background-color:#fff !important;position:relative !important;vertical-align:top}.pls-contentLeft{background-repeat:repeat-y;background-position:right;vertical-align:top}.pls-dropRight{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png) !important;background-repeat:repeat-y !important;vertical-align:top}.pls-vert,.pls-tailleft,.pls-dropTR .pls-dropBR,.pls-dropBL,.pls-vert img{vertical-align:top}.pls-dropBottom{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png) !important;background-repeat:repeat-x !important;width:100%;vertical-align:top}.pls-topLeft{background:inherit !important;text-align:right;vertical-align:bottom}.pls-topRight{background:inherit !important;text-align:left;vertical-align:bottom}.pls-bottomLeft{background:inherit !important;text-align:right}.pls-bottomRight{background:inherit !important;text-align:left;vertical-align:top}.pls-tailtop,.pls-tailright,.pls-tailbottom,.pls-tailleft{display:none;position:relative}.pls-tailbottom,.pls-tailtop,.pls-tailright,.pls-tailleft,.pls-dropTR,.pls-dropBR,.pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png) !important;background-repeat:no-repeat}.tbl-grey .pls-tailbottom,.tbl-grey .pls-tailtop,.tbl-grey .pls-tailright,.tbl-grey .pls-tailleft,.tbl-grey .pls-dropTR,.tbl-grey .pls-dropBR,.tbl-grey .pls-dropBL{background-image:url(//ssl.gstatic.com/s2/oz/images/stars/po/bubblev1/bubbleSprite-grey.png) !important}.pls-tailbottom{background-position:-23px 0}.pls-confirm-container .pls-tailbottom{background-position:-23px -10px}.pls-tailtop{background-position:-19px -20px}.pls-tailright{background-position:0 0}.pls-tailleft{background-position:-10px 0}.pls-tailtop{vertical-align:top}.gc-bubbleDefault td{line-height:0;font-size:0}.pls-topLeft img,.pls-topRight img,.pls-tailbottom{vertical-align:bottom}.pls-bottomLeft img,.bubbleDropTR,.pls-dropBottomL img,.pls-dropBottom img,.pls-dropBottomR img,.pls-bottomLeft{vertical-align:top}.pls-dropTR{background-position:0 -22px}.pls-dropBR{background-position:0 -27px}.pls-dropBL{background-position:0 -16px}.pls-spacertop,.pls-spacerright,.pls-spacerbottom,.pls-spacerleft{position:static !important}.pls-spinner{bottom:0;position:absolute;left:0;margin:auto;right:0;top:0} </style><link rel="preload" href="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/integrator_002.js" as="script"><script type="text/javascript" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/integrator_002.js"></script><link rel="preload" href="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/integrator.js" as="script"><script type="text/javascript" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/integrator.js"></script></head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<nav class="navbar navbar-default main-top-nav" role="navigation">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<a class="navbar-brand" href="https://thecodebuilder.blogspot.in/">
+<i class="fa fa-home"></i>
+</a>
+<button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+<span class="sr-only">
+              Toggle navigation
+            </span>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+<span class="icon-bar">
+</span>
+</button>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="https://thecodebuilder.blogspot.in/search/label/Prolog%20Program">
+                Prolog
+                <b class="caret">
+</b>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a href="https://thecodebuilder.blogspot.in/search/label/Artificial%20intelligence">
+                    artificial intelligence programming in prolog
+                  </a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="https://thecodebuilder.blogspot.in/search/label/Java%20Program">
+                Java 
+                <b class="caret">
+</b>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a href="https://thecodebuilder.blogspot.in/search/label/compiler%20design">
+                    Compiler design program in Java
+                  </a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a class="dropdown-toggle" data-toggle="dropdown" href="https://thecodebuilder.blogspot.in/search/label/android%20programming">
+                Android 
+                <b class="caret">
+</b>
+</a>
+<ul class="dropdown-menu">
+<li>
+<a href="https://thecodebuilder.blogspot.in/search/label/android%20programming">
+                    Code
+                  </a>
+</li>
+</ul>
+</li>
+</ul>
+<form action="/search" class="navbar-form navbar-right" method="get" role="search">
+<div class="form-group">
+<input class="form-control form-main-search" name="q" placeholder="Search" type="text">
+</div>
+<button class="btn btn-def" type="submit">
+              Submit
+            </button>
+</form>
+<ul class="nav nav-pills navbar-right">
+<li>
+<a href="https://www.facebook.com/CodeBuilder-1264771556941437/">
+<i class="fa fa-facebook">
+</i>
+</a>
+</li>
+<li>
+<a href="https://twitter.com/builder_code">
+<i class="fa fa-twitter">
+</i>
+</a>
+</li>
+<li>
+<a href="https://in.pinterest.com/12dit099/">
+<i class="fa fa-pinterest">
+</i>
+</a>
+</li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</div>
+</nav>
+<div class="clearfix"></div>
+<header id="main-header-wrapper">
+<div class="container container-slash">
+<div id="header-wrapper">
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 head-col">
+<div class="section" id="blog-title"><div class="widget Header" data-version="1" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<div class="h-title">
+<a href="http://thecodebuilder.blogspot.com/">
+CodeBuilder
+</a>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="top-ad">
+<div class="top-ad no-items section" id="top-ad">
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="clearfix"></div>
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+<div class="main section" id="main"><div class="widget Blog" data-version="1" id="Blog1">
+<!--Can't find substitution for tag [defaultAdStart]-->
+<div class="post-outer">
+<div class="post hentry" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+<meta content="8778103409164318535" itemprop="blogId">
+<meta content="4162110822545415034" itemprop="postId">
+<a name="4162110822545415034"></a>
+<h1 class="post-title entry-title">
+Prolog program to find the roots of the quadratic equation. - Artificial intelligence
+</h1>
+<div class="post-header">
+<div class="post-header-line-1"></div>
+<span class="post-author vcard">
+<i class="fa fa-user"></i>
+<span class="fn">
+Dharmik Thummar
+</span>
+</span>
+<span class="post-timestamp">
+<i class="fa fa-clock-o"></i>
+<abbr class="published" title="2017-09-22T08:32:00-07:00">
+8:32 AM
+</abbr>
+</span>
+<span class="post-labels">
+<i class="fa fa-tags"></i>
+<a href="http://thecodebuilder.blogspot.com/search/label/Artificial%20intelligence" rel="tag">
+Artificial intelligence
+</a>
+
+                                ,
+                              
+<a href="http://thecodebuilder.blogspot.com/search/label/Prolog%20Program" rel="tag">
+Prolog Program
+</a>
+</span>
+<span class="post-comment-link">
+<a class="comment-link" href="http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html#comment-form" onclick="">
+No comments
+</a>
+</span>
+</div>
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<br>
+<ul style="text-align: left;">
+<li><span style="font-family: &quot;times new roman&quot; , serif;"><b><u><b><span style="font-family: &quot;times new roman&quot; , serif; font-size: 14.0pt; line-height: 115%;" lang="EN-IN">program to find the
+roots of the quadratic equation.</span></b></u></b></span></li>
+</ul>
+<br>
+<b style="font-family: &quot;times new roman&quot;, serif;"><u>Program</u></b><br>
+<b style="font-family: &quot;times new roman&quot;, serif;"><u><br></u></b>
+<br>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">delta(A,
+B, C, D):- D is B*B - 4*A*C.<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">equation(A,B,C,X)
+:-<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">&nbsp;delta(A,B,C,D1),<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">&nbsp;(&nbsp; D1
+&lt; 0<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">&nbsp;-&gt; X is 0<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">&nbsp;;&nbsp; D1
+=:= 0<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">&nbsp;-&gt; X is -B/2*A<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">&nbsp;;&nbsp; X is
+-B-sqrt(D1)/2*A<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">&nbsp;).<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<br></div>
+<div class="MsoNoSpacing">
+<u><span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;"><b>Output</b><o:p></o:p></span></u></div>
+<div class="MsoNoSpacing">
+<u><span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;"><br></span></u></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">?-
+equation(1,2,3,X).<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">X
+= 0.<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">?-
+equation(1,4,3,X).<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">X
+= -5.0.<o:p></o:p></span></div>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">?-
+equation(1,4,4,X).<o:p></o:p></span></div>
+<br>
+<div class="MsoNoSpacing">
+<span style="font-family: &quot;times new roman&quot; , serif; font-size: 12.0pt;">X
+= -2.<o:p></o:p></span></div>
+</div>
+<div class="row rowpost">
+<ul class="post-sharing-menu">
+<li>
+<a class="share_pgo" href="https://plus.google.com/share?u=http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html&amp;t=Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence" target="_blank" title="Share on Google +">
+<i class="fa fa-google-plus">
+</i>
+</a>
+</li>
+<li>
+<a class="share_pfb" href="http://www.facebook.com/sharer.php?u=http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html&amp;t=Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence" target="_blank" title="Share on facebook">
+<i class="fa fa-facebook">
+</i>
+</a>
+</li>
+<li>
+<a class="share_ptwi" href="http://twitter.com/intent/tweet?text=Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence&amp;url=http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html" target="_blank" title="Share on Twitter">
+<i class="fa fa-twitter">
+</i>
+</a>
+</li>
+<li>
+<a class="share_pli" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html&amp;title=Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence" target="_blank" title="Share on Linkedin">
+<i class="fa fa-linkedin">
+</i>
+</a>
+</li>
+</ul>
+</div>
+<div class="boxframe">
+<div id="related-posts">
+<script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/Artificial%2520intelligence" type="text/javascript"></script>
+<script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/Prolog%2520Program" type="text/javascript"></script>
+<script type="text/javascript">
+                              var defaultnoimage="http://3.bp.blogspot.com/-PpjfsStySz0/UF91FE7rxfI/AAAAAAAACl8/092MmUHSFQ0/s1600/no_image.jpg";
+                              var maxresults=3;
+                              var splittercolor="#DDDDDD";
+                              var relatedpoststitle=" Related Posts";
+                              removeRelatedDuplicates();printRelatedLabels('http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html');</script><h3> Related Posts</h3><div style="clear: both;"><a style="text-decoration:none;float:left;" href="http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-square-root-of.html"><img class="img-home-thumb" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/no_image.jpg"><br><div class="imgpost">Prolog program to find the square r...</div></a><a style="text-decoration:none;float:left;" href="http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-check-whether-given-number-is-Armstrong-or-not-AI.html"><img class="img-home-thumb" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/no_image.jpg"><br><div class="imgpost">Prolog program to check whether a g...</div></a><a style="text-decoration:none;float:left;" href="http://thecodebuilder.blogspot.com/2017/09/prolog-programs-for-finding-factorial-and-Fibonacci.html"><img class="img-home-thumb" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/no_image.jpg"><br><div class="imgpost">prolog programs for finding factori...</div></a></div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div class="row">
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link btn btn-danger" href="http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-greatest-number-variable.html" id="Blog1_blog-pager-newer-link" title="Newer Post">
+Newer Post
+</a>
+</span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link btn btn-danger" href="http://thecodebuilder.blogspot.com/2017/09/prolog-program-for-login-with-and-without-recursion.html" id="Blog1_blog-pager-older-link" title="Older Post">
+Older Post
+</a>
+</span>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<span class="post-icons">
+<span class="item-control blog-admin pid-1092230711">
+<a href="https://www.blogger.com/post-edit.g?blogID=8778103409164318535&amp;postID=4162110822545415034&amp;from=pencil" title="Edit Post">
+<img alt="" class="icon-action" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/icon18_edit_allbkg.gif" width="18" height="18">
+</a>
+</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="comments" id="comments">
+<a name="comments"></a>
+<h4>
+No comments
+                      :
+                    </h4>
+<div id="Blog1_comments-block-wrapper">
+<dl class="avatar-comment-indent" id="comments-block">
+</dl>
+</div>
+<p class="comment-footer">
+</p><div class="comment-form">
+<a name="comment-form"></a>
+<h4 id="comment-post-message">
+Post a Comment
+</h4>
+<p>
+</p>
+<a href="https://www.blogger.com/comment-iframe.g?blogID=8778103409164318535&amp;postID=4162110822545415034&amp;blogspotRpcToken=2812809" id="comment-editor-src"></a>
+<iframe allowtransparency="true" class="blogger-iframe-colorize blogger-comment-from-post" id="comment-editor" name="comment-editor" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/comment-iframe.html" data-resized="true" width="100%" height="211px" frameborder="0"></iframe>
+<!--Can't find substitution for tag [post.friendConnectJs]-->
+<script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/1565398628-comment_from_post_iframe.js" type="text/javascript"></script>
+<script type="text/javascript">
+                    BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html', '0');
+                  </script>
+</div>
+<p></p>
+<div id="backlinks-container">
+<div id="Blog1_backlinks-container">
+</div>
+</div>
+</div>
+<!--Can't find substitution for tag [defaultAdEnd]-->
+<div class="inline-ad">
+</div>
+<!--Can't find substitution for tag [adStart]-->
+<!--Can't find substitution for tag [adEnd]-->
+<div class="post-feeds">
+<div class="feed-links">
+Subscribe to:
+<a class="feed-link" href="http://thecodebuilder.blogspot.com/feeds/4162110822545415034/comments/default" target="_blank" type="application/atom+xml">
+Post Comments
+                      (
+                      Atom
+                      )
+                    </a>
+</div>
+</div>
+<script type="text/javascript">window.___gcfg = {'lang': 'en'};</script>
+</div><div class="widget HTML" data-version="1" id="HTML902">
+
+            <script type="text/javascript">
+            var disqus_config = function () { 
+                this.language = "pt_BR";
+            };
+            var disqus_shortname = '
+';
+             (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+            </script>
+          
+</div><div class="widget HTML" data-version="1" id="HTML901">
+<div id="fb-root"></div><script>$(".facebook-tab").append("<div class='fb-comments' data-href='http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html' data-width='100%' data-numposts='5' data-colorscheme='light'></div>");</script>
+          
+</div></div>
+<!-- END Loop -->
+</div>
+<!-- END Content -->
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hide-home-sidebar">
+<div class="sidebox">
+<div class="sidebar section" id="sidebar"><div class="widget AdSense" data-version="1" id="AdSense1">
+<div class="widget-content">
+<script async="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/adsbygoogle.js"></script>
+<!-- thecodebuilder_sidebar_AdSense1_1x1_as -->
+<ins class="adsbygoogle" style="display: block; height: 250px;" data-ad-client="ca-pub-9069475178423107" data-ad-host="ca-host-pub-1556223355139109" data-ad-host-channel="L0001" data-ad-slot="5884954253" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:303px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:303px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:303px;height:250px;" width="303" height="250" frameborder="0"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=8778103409164318535&amp;widgetType=AdSense&amp;widgetId=AdSense1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("AdSense1"));' target="configAdSense1" title="Edit">
+<img alt="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget HTML" data-version="1" id="HTML1">
+<div class="widget-content">
+<script async="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/adsbygoogle.js"></script>
+<!-- codebul_sidebar_large -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-9069475178423107" data-ad-slot="7812457052" data-adsbygoogle-status="done"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><ins id="aswift_1_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;width:300px;height:600px;" width="300" height="600" frameborder="0"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=8778103409164318535&amp;widgetType=HTML&amp;widgetId=HTML1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target="configHTML1" title="Edit">
+<img alt="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget BlogArchive" data-version="1" id="BlogArchive1">
+<h2>Blog Archive</h2>
+<div class="widget-content">
+<div id="ArchiveList">
+<div id="BlogArchive1_ArchiveList">
+<ul class="flat">
+<li class="archivedate">
+<a href="http://thecodebuilder.blogspot.com/2018/03/">March</a> (5)
+      </li>
+<li class="archivedate">
+<a href="http://thecodebuilder.blogspot.com/2017/11/">November</a> (6)
+      </li>
+<li class="archivedate">
+<a href="http://thecodebuilder.blogspot.com/2017/10/">October</a> (7)
+      </li>
+<li class="archivedate">
+<a href="http://thecodebuilder.blogspot.com/2017/09/">September</a> (7)
+      </li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=8778103409164318535&amp;widgetType=BlogArchive&amp;widgetId=BlogArchive1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target="configBlogArchive1" title="Edit">
+<img alt="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget Profile" data-version="1" id="Profile1">
+<h2>About Me</h2>
+<div class="widget-content">
+<a href="https://plus.google.com/103486192820714636877"><img alt="My photo" class="profile-img" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/photo.jpg" width="80" height="80"></a>
+<dl class="profile-datablock">
+<dt class="profile-data">
+<a class="profile-name-link g-profile" href="https://plus.google.com/103486192820714636877" rel="author" style="background-image: url(//www.google.com/images/icons/ui/gprofile_button-16.png);" data-gapiscan="true" data-onload="true" data-gapiattached="true">
+Dharmik Thummar
+</a>
+<br>
+<div style="text-indent: 0px; margin: 0px; padding: 0px; background: transparent none repeat scroll 0% 0%; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 111px; height: 20px;" id="___follow_0"><iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 111px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" id="I0_1524667666462" name="I0_1524667666462" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/follow.html" data-gapiattached="true" width="100%" frameborder="0"></iframe></div>
+</dt>
+</dl>
+<a class="profile-link" href="https://plus.google.com/103486192820714636877" rel="author">View my complete profile</a>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=8778103409164318535&amp;widgetType=Profile&amp;widgetId=Profile1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("Profile1"));' target="configProfile1" title="Edit">
+<img alt="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget Label" data-version="1" id="Label4">
+<h2>Labels</h2>
+<div class="widget-content list-label-widget-content">
+<ul>
+<li>
+<a dir="ltr" href="http://thecodebuilder.blogspot.com/search/label/android%20programming">android programming</a>
+</li>
+<li>
+<a dir="ltr" href="http://thecodebuilder.blogspot.com/search/label/Apex">Apex</a>
+</li>
+<li>
+<a dir="ltr" href="http://thecodebuilder.blogspot.com/search/label/apex%20class">apex class</a>
+</li>
+<li>
+<a dir="ltr" href="http://thecodebuilder.blogspot.com/search/label/Apex%20trigger">Apex trigger</a>
+</li>
+<li>
+<a dir="ltr" href="http://thecodebuilder.blogspot.com/search/label/Artificial%20intelligence">Artificial intelligence</a>
+</li>
+<li>
+<a dir="ltr" href="http://thecodebuilder.blogspot.com/search/label/compiler%20design">compiler design</a>
+</li>
+<li>
+<a dir="ltr" href="http://thecodebuilder.blogspot.com/search/label/Java%20Program">Java Program</a>
+</li>
+<li>
+<a dir="ltr" href="http://thecodebuilder.blogspot.com/search/label/Prolog%20Program">Prolog Program</a>
+</li>
+<li>
+<a dir="ltr" href="http://thecodebuilder.blogspot.com/search/label/Salesforce">Salesforce</a>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=8778103409164318535&amp;widgetType=Label&amp;widgetId=Label4&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("Label4"));' target="configLabel4" title="Edit">
+<img alt="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div>
+<div class="widget HTML" data-version="1" id="HTML12">
+<div class="widget-content">
+<script async="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/adsbygoogle.js"></script>
+<!-- codebul_bottom -->
+<ins class="adsbygoogle" style="display: block; height: 250px;" data-ad-client="ca-pub-9069475178423107" data-ad-slot="9437364069" data-ad-format="auto" data-adsbygoogle-status="done"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:303px;background-color:transparent;"><ins id="aswift_2_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:303px;background-color:transparent;"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;width:303px;height:250px;" width="303" height="250" frameborder="0"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=8778103409164318535&amp;widgetType=HTML&amp;widgetId=HTML12&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML12"));' target="configHTML12" title="Edit">
+<img alt="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget Navbar" data-version="1" id="Navbar1"><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"><iframe ng-non-bindable="" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="" tabindex="0" vspace="0" id="navbar-iframe" name="navbar-iframe" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/navbar.html" width="100%" frameborder="0"></iframe></div>
+<script type="text/javascript" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/plusone.js" gapi_processed="true"></script>
+<script type="text/javascript">
+      gapi.load("gapi.iframes:gapi.iframes.style.bubble", function() {
+        if (gapi.iframes && gapi.iframes.getContext) {
+          gapi.iframes.getContext().openChild({
+              url: 'https://www.blogger.com/navbar.g?targetBlogID\x3d8778103409164318535\x26blogName\x3dCodeBuilder\x26publishMode\x3dPUBLISH_MODE_BLOGSPOT\x26navbarType\x3dLIGHT\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttp://thecodebuilder.blogspot.com/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttp://thecodebuilder.blogspot.com/\x26targetPostID\x3d4162110822545415034\x26blogPostOrPageUrl\x3dhttp://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html\x26vt\x3d-3456419863604244512',
+              where: document.getElementById("navbar-iframe-container"),
+              id: "navbar-iframe"
+          });
+        }
+      });
+    </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script>
+</div>
+<div class="widget Attribution" data-version="1" id="Attribution1">
+<div class="widget-content" style="text-align: center;">
+©CodeBuilder2017. Powered by <a href="https://www.blogger.com/" target="_blank">Blogger</a>.
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=8778103409164318535&amp;widgetType=Attribution&amp;widgetId=Attribution1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("Attribution1"));' target="configAttribution1" title="Edit">
+<img alt="" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/icon18_wrench_allbkg.png" width="18" height="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- end sidebar widgets -->
+</div>
+</div>
+<!-- END Container -->
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer-top">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="footer1 no-items section" id="footer1"></div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="footer2 no-items section" id="footer2"></div>
+</div>
+<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="footer3 no-items section" id="footer3"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p class="footer-link">
+        © 
+        <a href="http://thecodebuilder.blogspot.com/">
+<strong>
+CodeBuilder
+</strong>
+</a>
+        2017 . Powered by 
+        <a href="http://www.blogger.com/" rel="nofollow" title="Blogger">
+          Blogger
+        </a>
+</p>
+</div>
+<!-- END Footer -->
+<script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/bootstrap.js"></script>
+<script src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/plusone.js" type="text/javascript" gapi_processed="true"></script>
+
+<script type="text/javascript" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/1845596459-widgets.js"></script>
+<script type="text/javascript">
+window['__wavt'] = 'AOuZoY7bouVhuP6eUT2xztPaB2tYNmDXfQ:1524515724464';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d8778103409164318535','//thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html','8778103409164318535');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '8778103409164318535', 'title': 'CodeBuilder', 'url': 'http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html', 'canonicalUrl': 'http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html', 'homepageUrl': 'http://thecodebuilder.blogspot.com/', 'searchUrl': 'http://thecodebuilder.blogspot.com/search', 'canonicalHomepageUrl': 'http://thecodebuilder.blogspot.com/', 'blogspotFaviconUrl': 'http://thecodebuilder.blogspot.com/favicon.ico', 'bloggerUrl': 'https://www.blogger.com', 'hasCustomDomain': false, 'httpsEnabled': true, 'enabledCommentProfileImages': true, 'gPlusViewType': 'FILTERED_POSTMOD', 'adultContent': false, 'analyticsAccountNumber': '', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'languageDirection': 'ltr', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22CodeBuilder - Atom\x22 href\x3d\x22http://thecodebuilder.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22CodeBuilder - RSS\x22 href\x3d\x22http://thecodebuilder.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22CodeBuilder - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/8778103409164318535/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22CodeBuilder - Atom\x22 href\x3d\x22http://thecodebuilder.blogspot.com/feeds/4162110822545415034/comments/default\x22 /\x3e\n', 'meTag': '', 'openIdOpTag': '', 'adsenseClientId': 'ca-pub-9069475178423107', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'adsenseHasAds': true, 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/f3b7c696aa574948', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Google+', 'key': 'googlePlus', 'shareMessage': 'Share to Google+', 'target': 'googleplus'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}, 'hasCustomJumpLinkMessage': false, 'jumpLinkMessage': 'Read more', 'pageType': 'item', 'postId': '4162110822545415034', 'pageName': 'Prolog program to find the roots of the quadratic equation. - Artificial intelligence', 'pageTitle': 'CodeBuilder: Prolog program to find the roots of the quadratic equation. - Artificial intelligence', 'metaDescription': 'Prolog program to find the roots of the quadratic equation, Write a Prolog program to find the roots of the quadratic equation. SWI Prolog program to find the roots of the quadratic equation. AI Prolog program to find the roots of the quadratic equation.'}}, {'name': 'features', 'data': {'lazy_images': 'false', 'sharing_get_link_dialog': 'true', 'sharing_native': 'false'}}, {'name': 'messages', 'data': {'edit': 'Edit', 'linkCopiedToClipboard': 'Link copied to clipboard!', 'ok': 'Ok', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Prolog program to find the roots of the quadratic equation. - Artificial intelligence', 'description': 'Prolog program to find the roots of the quadratic equation, Write a Prolog program to find the roots of the quadratic equation. SWI Prolog program to find the roots of the quadratic equation. AI Prolog program to find the roots of the quadratic equation.', 'url': 'http://thecodebuilder.blogspot.com/2017/09/prolog-program-to-find-roots-of-quadratic-equation.html', 'type': 'item', 'isSingleItem': true, 'isMultipleItems': false, 'isError': false, 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isLabelSearch': false, 'postId': 4162110822545415034}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'blog-title', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'useNgc': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/1931698988-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/368954415-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML902', 'main', null, document.getElementById('HTML902'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML901', 'main', null, document.getElementById('HTML901'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AdSenseView', new _WidgetInfo('AdSense1', 'sidebar', null, document.getElementById('AdSense1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebar', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr', 'loadingMessage': 'Loading\x26hellip;'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar', null, document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label4', 'sidebar', null, document.getElementById('Label4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML12', 'sidebar', null, document.getElementById('HTML12'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'sidebar', null, document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'sidebar', null, document.getElementById('Attribution1'), {}, 'displayModeFull'));
+</script>
+
+<iframe name="oauth2relay538753208" id="oauth2relay538753208" src="Prolog%20program%20to%20find%20the%20roots%20of%20the%20quadratic%20equation.%20-%20Artificial%20intelligence_files/postmessageRelay.html" style="width: 1px; height: 1px; position: absolute; top: -100px;" tabindex="-1" aria-hidden="true"></iframe><iframe id="google_osd_static_frame_8546755979161" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>

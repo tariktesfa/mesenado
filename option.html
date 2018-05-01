@@ -1,0 +1,18 @@
+<select id="first"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+<select id="second"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+<select id="third"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+<select id="fourth"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+<script>
+var removeSelection = function(select) {
+    $('select').filter(':not(#' + select.attr('id') + ')').each(function() {
+        var index = select.find(':selected').index();
+        $(this).find('option:eq(' + index + ')').remove();
+    });
+};
+
+$(function() {
+    $('select').change(function() {
+        removeSelection($(this));
+    });
+});
+</script>

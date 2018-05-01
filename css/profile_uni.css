@@ -1,0 +1,142 @@
+body {
+  min-height: 75rem; /* Can be removed; just added for demo purposes */
+  overflow-x: hidden;
+}
+
+a{
+  color: #959595;
+  text-decoration: none;
+}
+a:hover{
+  color: #555555;
+  text-decoration: none;
+}
+
+.logo{
+  color: #89b927;
+  font-weight: 900;
+}
+
+.logo{
+  color: #89b927;
+  font-weight: 900;
+}
+
+.navbar .btn{
+  background: transparent;
+  border: 2px solid #89b927;
+}
+.navbar .btn:hover{
+  background-color: #89b927;
+}
+
+
+.cover .bg_img{
+  padding: 0px;
+}
+.cover img{
+  width: 100%;
+  height: 450px;
+}
+
+.profile .profle-info .logo_img .pi{
+  background-color: #e9ecef;
+  width: 100%;
+  height: 260px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.profile .profle-info .logo_img .pi  img{
+  width: 100%;
+  height: 270px;
+  padding: 0px 20px 20px 20px;
+}
+.profile .profle-info .logo_img {
+   position: relative;
+   bottom: 70px;
+   padding-right: 0px;
+}
+
+.profile .profile_title{
+  margin-top: 60px;
+  padding-left: 0px;
+}
+.profile .profile_title h3{
+  font-weight: 400;
+}
+.profile .profile_title h5{
+  color: #888888;
+  font-weight: 300;
+}
+
+
+.gallary{
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+.heading  h3{
+  font-size: 25px;
+  color: #89b927;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.heading  h3 .float-right{
+  font-size: 18px;
+}
+.gallary .g-img{
+  padding: 0px 5px;
+}
+.gallary .g-img  img{
+  width: 100%;
+  height: 150px;
+}
+
+.depart .d-list{
+  margin-top: 20px;
+}
+.depart .d-list h5{
+  font-weight: 400;
+}
+.depart .d-list .low-txt{
+  font-size: 13px;
+  color: #888888;
+  padding-left: 20px;
+}
+
+
+.low-j {
+  height: 250px;
+  background-image: url(../img/4a.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bt-jb{
+  height: 300px;
+  border-radius: 0px;
+  margin-top: 50px;
+}
+.bt-jb h5{
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+}
+.bt-jb input[type="email"] {
+  border-radius: 50px;
+  width: auto;
+  border: 1px solid #007bff;
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+footer p a{
+  color: #89b927;
+}

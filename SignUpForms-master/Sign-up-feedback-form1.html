@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign -up Error report-YIPTV</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/demo.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-400">
+
+		<form action="" method="" class="j-forms" novalidate>
+
+			<div class="header">
+				<p>Error With Your Channel</p>
+			</div>
+			<!-- end /.header-->
+
+			<div class="content">
+
+				<!-- start textarea -->
+				<div class="unit">
+					<label class="label">The problem is</label>
+					<div class="input">
+						<textarea placeholder="your message..." spellcheck="false" name="message"></textarea>
+					</div>
+				</div>
+				<!-- end textarea -->
+
+				<!-- start email -->
+				<div class="unit">
+					<label class="label">Email</label>
+					<div class="input">
+						<label class="icon-left" for="email">
+							<i class="fa fa-envelope-o"></i>
+						</label>
+						<input type="email" placeholder="email@example.com" id="email" name="email">
+					</div>
+				</div>
+				<!-- end email -->
+
+				<!-- start file -->
+				<div class="unit">
+					<label class="label">Error screenshot</label>
+					<label class="input append-small-btn">
+						<label class="icon-left" for="file1-input">
+							<i class="fa fa-download"></i>
+						</label>
+						<div class="file-button">
+							Browse
+							<input type="file" name="file1" onchange="document.getElementById('file1-input').value = this.value;">
+						</div>
+						<input type="text" id="file1-input" readonly placeholder="no file selected">
+						<span class="hint">Only: jpg / png Size: less 1 Mb</span>
+					</label>
+				</div>
+				<!-- end file -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn">Report</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Free Registration Form-YIPTV</title>
+
+	<!-- Your META here -->
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="j-folder/css/main-signup.css">
+	<link rel="stylesheet" href="j-folder/css/font-awesome.min.css">
+	<link rel="stylesheet" href="j-folder/css/j-forms.css">
+
+	<!-- Scripts -->
+	<script src="j-folder/js/jquery.1.11.1.min.js"></script>
+
+	<!--[if lt IE 10]>
+			<script src="j-folder/js/jquery.placeholder.min.js"></script>
+		<![endif]-->
+
+</head>
+<body class="bg-pic">
+	<div class="wrapper wrapper-400">
+
+		<form action="" method="" class="j-forms" novalidate>
+
+			<div class="header">
+				<p>My YIP TV Free Membership</p>
+			</div>
+			<!-- end /.header -->
+
+			<div class="content">
+
+				<!-- start name -->
+				<div class="unit">
+					<div class="input">
+						<label class="icon-right" for="username">
+							<i class="fa fa-user"></i>
+						</label>
+						<input type="text" id="username" name="username" placeholder="User Name">
+					</div>
+				</div>
+				<!-- end name -->
+
+				<!-- start email -->
+				<div class="unit">
+					<div class="input">
+						<label class="icon-right" for="email">
+							<i class="fa fa-envelope-o"></i>
+						</label>
+						<input type="email" id="email" name="email" placeholder="email">
+					</div>
+				</div>
+				<!-- end email -->
+                
+                <!-- start email phone -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<div class="input">
+							<label class="icon-right" for="email">
+								<i class="fa fa-envelope-o"></i>
+							</label>
+							<input type="email" placeholder="Email" id="email" name="email">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<div class="input">
+							<label class="icon-right" for="phone">
+								<i class="fa fa-phone"></i>
+							</label>
+							<input type="text" placeholder="Phone" id="phone" name="phone">
+							<span class="tooltip tooltip-right-top">Your contact phone number</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- start password -->
+				<div class="unit">
+					<div class="input">
+						<label class="icon-right" for="password">
+							<i class="fa fa-lock"></i>
+						</label>
+						<input type="password" id="password" name="password" placeholder="password">
+					</div>
+				</div>
+				<!-- end password -->
+
+				<!-- start confirm password -->
+				<div class="unit">
+					<div class="input">
+						<label class="icon-right" for="confirm_password">
+							<i class="fa fa-unlock"></i>
+						</label>
+						<input type="password" id="confirm_password" name="confirm_password" placeholder="confirm password">
+					</div>
+				</div>
+				<!-- end confirm password -->
+
+				<div class="divider gap-bottom-25"></div>
+
+				<!-- start name -->
+				<div class="j-row">
+					<div class="span6 unit">
+						<div class="input">
+							<input type="text" placeholder="first name" name="first_name">
+						</div>
+					</div>
+					<div class="span6 unit">
+						<div class="input">
+							<input type="text" placeholder="last name" name="last_name">
+						</div>
+					</div>
+				</div>
+				<!-- end name -->
+
+				<!-- start gender -->
+				<div class="unit">
+					<label class="input select">
+						<select name="gender">
+							<option value="none" selected disabled="">select gender...</option>
+							<option value="male">male</option>
+							<option value="female">female</option>
+							<option value="other">other</option>
+						</select>
+						<i></i>
+					</label>
+				</div>
+				<!-- end gender -->
+
+				<!-- start captcha -->
+				<div class="unit">
+					<div class="captcha-group">
+						<div class="input">
+							<label class="icon-right" for="captcha_code">
+								<i class="fa fa-unlock-alt"></i>
+							</label>
+							<input type="text" id="captcha_code" name="captcha_code" placeholder="solve the captcha">
+							<span class="tooltip tooltip-right-top">Enter sum of the digits</span>
+						</div>
+						<label class="captcha" for="captcha_code">
+							15 + 1 =
+						</label>
+					</div>
+				</div>
+				<!-- end captcha -->
+
+				<!-- start terms -->
+				<div class="unit">
+					<label class="checkbox">
+						<input type="checkbox" id="check-enable-button">
+						<i></i>
+						I agree with <a href="#" class="link">Terms of use</a>
+					</label>
+				</div>
+				<!-- end terms -->
+
+			</div>
+			<!-- end /.content -->
+
+			<div class="footer">
+				<button type="submit" class="primary-btn disabled-view" id="enable-button" disabled="">Register</button>
+			</div>
+			<!-- end /.footer -->
+
+		</form>
+	</div>
+	<script>
+	$(document).ready(function() {
+////////////////////////////////////////////////////
+		// Enabled button
+		$('#check-enable-button').on('change', function() {
+			if ( $('#check-enable-button').is(':checked') ) {
+				$('#enable-button').attr('disabled', false).removeClass('disabled-view');
+			} else {
+				$('#enable-button').attr('disabled', true).addClass('disabled-view');
+			};
+		});
+////////////////////////////////////////////////////
+	});
+	</script>
+</body>
+</html>
